@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Notes</title>
+</head>
+
+<body>
+
+    <h1>HTML Notes</h1>
+
+    <p>
+        A simple guide to understanding HTML and its basic tags.
+    </p>
+
+    <hr>
+
+    <h2>1. What is HTML?</h2>
+
+    <p>
+        HTML stands for <b>HyperText Markup Language</b>.
+        It is a markup language used to create the structure
+        and content of webpages.
+    </p>
+
+    <p>
+        HTML is not a programming language. It tells the browser
+        what different types of content represent.
+    </p>
+
+    <pre>
+HTML
+ |
+ +-- Text
+ +-- Images
+ +-- Audio
+ +-- Video
+    </pre>
+
+    <hr>
+
+    <h2>2. Tags, Elements & Attributes</h2>
+
+    <h3>HTML Tag</h3>
+
+    <p>
+        A tag is written inside angle brackets and tells the
+        browser what type of content it represents.
+    </p>
+
+    <pre>
+&lt;p&gt;
+&lt;h1&gt;
+&lt;img&gt;
+    </pre>
+
+    <h3>HTML Element</h3>
+
+    <p>
+        An element is the complete structure containing the
+        opening tag, content, and closing tag.
+    </p>
+
+    <pre>
+&lt;p&gt;Hello World&lt;/p&gt;
+
+Tag      → &lt;p&gt;
+Content  → Hello World
+Element  → &lt;p&gt;Hello World&lt;/p&gt;
+    </pre>
+
+    <h3>HTML Attribute</h3>
+
+    <p>
+        Attributes provide additional information about an element.
+        They are written inside the opening tag.
+    </p>
+
+    <pre>
+&lt;img src="image.jpg" alt="HTML Logo"&gt;
+
+src → image location
+alt → alternative text
+    </pre>
+
+    <hr>
+
+    <h2>3. Basic HTML Tags</h2>
+
+    <h3>3.1 Heading Tags</h3>
+
+    <p>
+        HTML provides six heading levels, from h1 to h6.
+    </p>
+
+    <pre>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+    </pre>
+
+    <h1>H1 Heading</h1>
+    <h2>H2 Heading</h2>
+    <h3>H3 Heading</h3>
+    <h4>H4 Heading</h4>
+    <h5>H5 Heading</h5>
+    <h6>H6 Heading</h6>
+
+    <hr>
+
+    <h3>3.2 Paragraph Tag</h3>
+
+    <p>
+        The <b>p</b> tag is used to display a paragraph of text.
+    </p>
+
+    <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+    </pre>
+
+    <p>
+        This is an example paragraph created using HTML.
+    </p>
+
+    <hr>
+
+    <h3>3.3 Preformatted Text</h3>
+
+    <p>
+        The <b>pre</b> tag preserves spaces and line breaks.
+        It is useful for code and formatted text.
+    </p>
+
+    <pre>
+Name       Age       City
+-------------------------
+Rahul      22        Delhi
+Priya      21        Mumbai
+Aman       23        Raipur
+    </pre>
+
+    <hr>
+
+    <h3>3.4 Image Tag</h3>
+
+    <p>
+        The <b>img</b> tag is used to display an image.
+    </p>
+
+    <pre>
+&lt;img src="image.jpg" alt="HTML Logo"&gt;
+    </pre>
+
+    <img src="/img/html-logo.png" alt="HTML Logo" width="180">
+
+    <p>
+        <b>src</b> → specifies the image location<br>
+        <b>alt</b> → describes the image
+    </p>
+
+    <hr>
+
+    <h3>3.5 Audio Tag</h3>
+
+    <p>
+        The <b>audio</b> tag is used to add audio to a webpage.
+    </p>
+
+    <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+    </pre>
+
+    <audio controls>
+        <source src="/audio/file_example_MP3_700KB.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>
+        The <b>controls</b> attribute displays play, pause,
+        volume, and other audio controls.
+    </p>
+
+    <hr>
+
+    <h3>3.6 Video Tag</h3>
+
+    <p>
+        The <b>video</b> tag is used to add video to a webpage.
+    </p>
+
+    <pre>
+&lt;video controls width="500"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+    </pre>
+
+    <video controls width="500">
+        <source src="/video/HTML - Introduction - W3Schools.com .mp4" type="video/mp4">
+    </video>
+
+    <p>
+        <b>controls</b> → displays video controls<br>
+        <b>width</b> → specifies the video width
+    </p>
+
+    <hr>
+
+    <h2>4. Quick Reference</h2>
+
+    <pre>
+Tag        Purpose
+--------------------------------
+h1 - h6   Headings
+p         Paragraph
+pre       Preserves formatting
+img       Displays image
+audio     Adds audio
+video     Adds video
+    </pre>
+
+    <hr>
+
+    <h2>5. Practice</h2>
+
+    <h3>Predict the Output</h3>
+
+    <pre>
+&lt;h1&gt;My Website&lt;/h1&gt;
+&lt;p&gt;Welcome to my website.&lt;/p&gt;
+&lt;h2&gt;About Me&lt;/h2&gt;
+    </pre>
+
+    <p>
+        What will the browser display?
+    </p>
+
+    <details>
+        <summary>Show Answer</summary>
+
+        <p>
+            A main heading "My Website", followed by a paragraph
+            and an h2 heading "About Me".
+        </p>
+    </details>
+
+    <h3>Find the Mistake</h3>
+
+    <pre>
+&lt;img&gt;
+    </pre>
+
+    <p>
+        What is missing?
+    </p>
+
+    <details>
+        <summary>Show Answer</summary>
+
+        <p>
+            The image needs a <b>src</b> attribute to specify
+            which image should be displayed.
+        </p>
+
+        <pre>
+&lt;img src="image.jpg" alt="My Image"&gt;
+        </pre>
+    </details>
+
+    <hr>
+
+    <h2>6. Final Challenge</h2>
+
+    <p>
+        Create a webpage called <b>My HTML Journey</b>.
+    </p>
+
+    <pre>
+Requirements:
+
+1. Add a main heading.
+2. Add paragraphs.
+3. Use h1 to h6.
+4. Add a code example using pre.
+5. Add an image.
+6. Add audio.
+7. Add video.
+8. Explain each tag.
+    </pre>
+
+    <hr>
+
+    <h2>What I Learned</h2>
+
+    <p>
+        I learned how HTML creates the structure and content
+        of a webpage using tags, elements, and attributes.
+    </p>
+
+    <p>
+        I also learned how to add text, images, audio,
+        and video using HTML.
+    </p>
+
+</body>
+</html>
