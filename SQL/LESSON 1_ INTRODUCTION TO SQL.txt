@@ -1,0 +1,62 @@
+
+
+
+
+SQL:
+
+SQL (Structured Query Language) is a standard programming language specifically designed for managing and 
+manipulating relational databases. It allows users to create, read, update, and delete data stored in tables.
+
+DATA:
+
+Data refers to raw, unprocessed facts and figures that have no context or meaning on their own. In databases, data can be numbers, text, dates, images, or any other type of information stored systematically. When data is processed and given context, it becomes meaningful information.
+
+Examples (Types of Data): 
+• Numeric Data: 101, 25000, 3.14 
+• String Data: 'John Doe', 'Engineering' 
+• Date Data: '2024-01-15', '2023-12-31'
+
+DATABASE:
+
+A database is an organized collection of structured data stored electronically, designed for efficient retrieval, insertion, and management. It acts as a central repository that allows multiple users and applications to access shared data in a controlled and consistent manner.
+
+SYNTAX:
+1. CREATE:
+    CREATE DATABASE database_name;
+2. ACCESS:
+    USE database_name;
+3. VIEW:
+    SHOW DATABASES;
+4. DELETE:
+    DROP DATABASE database_name;
+
+DBMS:
+
+A Database Management System (DBMS) is software that provides an interface between users/applications and the database. It handles data storage, retrieval, security, and integrity. It eliminates the complexity of managing raw data files, offering tools to define, manipulate, and control data efficiently. 
+
+Common DBMS Examples: 
+• MySQL – Open source RDBMS
+• Oracle – Enterprise-grade DBMS 
+• SQL Server – Microsoft's DBMS
+
+TYPES OF DBMS:
+• HDBMS (Hierarchical): Data stored in tree structure. Parent-child relationships. E.g., IBM IMS. 
+• NDBMS (Network): Data stored in graph/network structure allowing multiple parent nodes. E.g., IDMS. 
+• ODBMS (Object-Oriented): Stores data as objects (like OOP). E.g., db4o, ObjectDB. 
+• RDBMS (Relational): Data stored in tables with rows and columns. Most widely used. E.g., MySQL, Oracle.
+
+OBJECTIVES OF SQL:
+• Mass Storage: Manage large volumes of data efficiently using tables and indexes. 
+• Data Redundancy: Minimize duplicate data using normalization and foreign keys. 
+• Data Protection: Ensure security using DCL (GRANT/REVOKE) and backup mechanisms. 
+• Platform Independence: SQL is standardized and works across different OS and DBMS. 
+• Improved Data Sharing: Multiple users can access and modify the same data concurrently.
+
+HISTORY OF SQL:
+• 1970 – Dr. E.F. Codd proposed the Relational Model at IBM. 
+• 1974 – SQL was developed by Donald D Chamberlin and Raymond F Boyce at IBM. 
+• 1979 – Oracle became the first commercial SQL product. 
+• 1986 – SQL became an ANSI standard. 
+
+
+

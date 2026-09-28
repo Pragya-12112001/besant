@@ -1,0 +1,64 @@
+ER Diagram (Entity-Relationship Diagram):
+
+An ER Diagram is a graphical representation used to design a database before actual implementation. It acts like a visual blueprint to design and understand the structure of a database. It Uses different symbols to represent objects and their relationships.
+
+Components of ER Model:
+1.Entity
+An entity is a real-world object that can be identified. Represented by a rectangle (▭)
+Examples:
+Student
+Faculty
+Course
+Department
+Result
+
+2. Attribute
+Attributes are properties or characteristics of an entity. Represented by an oval (◯)
+Examples (Student):
+Roll No
+Name
+Branch
+Semester
+Mobile No
+Address
+Age
+
+Types of Attributes
+
+1.Single-Valued Attribute
+Has only one value
+Example: Roll No
+2. Multi-Valued Attribute
+Can have multiple values
+Example: Phone Number
+3. Derived Attribute
+Calculated from other attributes
+Example: Age (derived from Date of Birth)
+4. Composite Attribute
+Can be divided into sub-parts
+Example: Name → First Name, Middle Name, Last Name
+Address → Street, Area, Apartment
+5. Stored Attribute
+Manually stored in database
+Example: Date of Birth
+
+
+3. Relationship
+A relationship shows the association between two or more entities. Represented by a diamond (◇) Placed between two entities and Connected using lines
+Example:
+Student — Issues — Book
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+DATA TYPES:
+
+SQL data types define the kind of value a column can hold. Choosing the right data type ensures data 
+integrity, storage efficiency, and query performance.
+
+TYPES OF DATA TYPES:
+
+1.Numeric Data Types:
+
+• INT / INTEGER: Whole numbers. E.g., 1, 100, -50 
+• FLOAT / DOUBLE: Decimal numbers. E.g., 3.14, 99.99 
+• DECIMAL(p,s): Fixed precision decimal. E.g., DECIMAL(10,2) for currency 
+• BIGINT: Very large integers
+ 
+2.String Data Types:
+  
+• CHAR(n): Fixed-length string. Always uses n bytes. E.g., CHAR(10) 
+• VARCHAR(n): Variable-length string. Uses actual length. E.g., VARCHAR(255) 
+• TEXT: Large text content (up to 65,535 chars).E.g., Address
+• ENUM: Restricts a column to one values from a set of predefined string values. E.g., gender ENUM('Male','Female','Other') 
+
+3.Date/Time Data Types:
+
+• DATE: Stores date only. Format: YYYY-MM-DD 
+• TIME: Stores time only. Format: HH:MM:SS 
+• DATETIME: Stores both date and time 
+• YEAR: Stores 4-digit year / MONTH: Stores only month values upto 2-digits. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
