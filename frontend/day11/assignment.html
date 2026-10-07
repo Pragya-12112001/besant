@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  nav{
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: aliceblue;
+    gap: 15px;
+  }
+
+  @media all and (max-width:450px){
+    nav{
+      flex-direction: column;
+      background-color: aliceblue;
+      color: black;
+    }
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    row-gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .gbox{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    border: 5px solid black;
+    border-radius: 10px;
+  }
+</style>
+<body>
+  <nav>
+    <li>home</li>
+    <li>about us</li>
+    <li>contact us</li>
+    <li>career</li>
+    <li>login/ signup</li>
+  </nav>
+  <main>
+    <div class="grid">
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+      <div class="gbox"></div>
+    </div>
+  </main>
+</body>
+</html>

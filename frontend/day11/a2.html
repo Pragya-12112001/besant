@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML & CSS Practice</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>HTML & CSS Practice Website</h1>
+
+        <p>
+            This website demonstrates basic HTML tags and CSS concepts.
+        </p>
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#table">Table</a>
+        <a href="#form">Form</a>
+    </nav>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- ================= HOME ================= -->
+        <section id="home" class="section">
+
+            <h2>Welcome</h2>
+
+            <p>
+                HTML is used to create the <strong>structure</strong>
+                of a webpage, while CSS is used to control its
+                <em>appearance and layout</em>.
+            </p>
+
+            <p>
+                You can use <mark>HTML</mark> and
+                <mark>CSS</mark> together to create websites.
+            </p>
+
+            <hr>
+
+            <h3>Basic Text Tags</h3>
+
+            <p>This is a normal paragraph.</p>
+
+            <p>
+                <b>Bold text</b><br>
+                <strong>Strong text</strong><br>
+                <i>Italic text</i><br>
+                <em>Emphasized text</em><br>
+                <u>Underlined text</u><br>
+                <small>Small text</small><br>
+                H<sub>2</sub>O<br>
+                X<sup>2</sup>
+            </p>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="section">
+
+            <h2>About HTML</h2>
+
+            <p>
+                HTML stands for
+                <abbr title="HyperText Markup Language">HTML</abbr>.
+            </p>
+
+            <p>
+                HTML provides the structure of a webpage using
+                different elements and tags.
+            </p>
+
+            <blockquote>
+                "The best way to learn web development is by building."
+            </blockquote>
+
+            <p>
+                Example of inline code:
+                <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>
+            </p>
+
+        </section>
+
+
+        <!-- ================= LISTS ================= -->
+        <section class="section">
+
+            <h2>HTML Lists</h2>
+
+            <h3>Unordered List</h3>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+
+
+            <h3>Ordered List</h3>
+
+            <ol>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Learn JavaScript</li>
+                <li>Build Projects</li>
+            </ol>
+
+
+            <h3>Description List</h3>
+
+            <dl>
+                <dt>HTML</dt>
+                <dd>Used for webpage structure.</dd>
+
+                <dt>CSS</dt>
+                <dd>Used for webpage styling.</dd>
+
+                <dt>JavaScript</dt>
+                <dd>Used to add functionality.</dd>
+            </dl>
+
+        </section>
+
+
+        <!-- ================= IMAGE & LINKS ================= -->
+        <section class="section">
+
+            <h2>Images and Links</h2>
+
+            <p>Example image:</p>
+
+            <img
+                src="https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="Placeholder image"
+            >
+
+            <p>
+                Visit
+                <a href="https://www.magnific.com/free-photos-vectors/beautiful" target="_blank">
+                    <button>Click Me</button>
+                </a>
+            </p>
+
+            
+
+        </section>
+
+
+        <!-- ================= DIV & SPAN ================= -->
+        <section class="section">
+
+            <h2>Div and Span</h2>
+
+            <div class="box">
+
+                <h3>Div Element</h3>
+
+                <p>
+                    The <span class="highlight">div</span>
+                    is a block-level container.
+                </p>
+
+                <p>
+                    The span is an
+                    <span class="red-text">inline element</span>.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FLEXBOX ================= -->
+        <section id="skills" class="section">
+
+            <h2>Flexbox</h2>
+
+            <p>
+                Flexbox is useful for arranging elements in a row
+                or column.
+            </p>
+
+            <div class="flex-container">
+
+                <div class="flex-item html-box">
+                    HTML
+                </div>
+
+                <div class="flex-item css-box">
+                    CSS
+                </div>
+
+                <div class="flex-item js-box">
+                    JavaScript
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GRID ================= -->
+        <section class="section">
+
+            <h2>CSS Grid</h2>
+
+            <p>
+                CSS Grid is useful for creating rows and columns.
+            </p>
+
+            <div class="grid-container">
+
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TABLE ================= -->
+        <section id="table" class="section">
+
+            <h2>HTML Table</h2>
+
+            <table>
+
+                <caption>
+                    Student Information
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Pragya</td>
+                        <td>HTML</td>
+                        <td>90</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rahul</td>
+                        <td>CSS</td>
+                        <td>85</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ananya</td>
+                        <td>JavaScript</td>
+                        <td>92</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- ================= FORM ================= -->
+        <section id="form" class="section">
+
+            <h2>HTML Form</h2>
+
+            <form>
+
+                <label for="name">
+                    Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+
+                <label for="email">
+                    Email:
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+
+                <label for="password">
+                    Password:
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                >
+
+
+                <label for="age">
+                    Age:
+                </label>
+
+                <input
+                    type="number"
+                    id="age"
+                >
+
+
+                <label for="course">
+                    Select Course:
+                </label>
+
+                <select id="course">
+
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>React</option>
+
+                </select>
+
+
+                <p>Gender:</p>
+
+                <label>
+                    <input type="radio" name="gender">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender">
+                    Female
+                </label>
+
+
+                <p>Skills:</p>
+
+                <label>
+                    <input type="checkbox">
+                    HTML
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    CSS
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    JavaScript
+                </label>
+
+
+                <label for="message">
+                    Message:
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Write your message"
+                ></textarea>
+
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= POSITIONING ================= -->
+        <section class="section">
+
+            <h2>CSS Positioning</h2>
+
+            <p>
+                CSS positioning controls where an element appears on the page.
+                The main position values are static, relative, absolute,
+                fixed, and sticky.
+            </p>
+
+
+            <!-- ================= STATIC ================= -->
+
+            <div class="position-example">
+
+                <h3>1. Static Position</h3>
+
+                <p>
+                    Static is the default position of an HTML element.
+                    The element follows the normal document flow.
+                </p>
+
+                <div class="static-box">
+                    Static
+                </div>
+
+            </div>
+
+
+            <!-- ================= RELATIVE ================= -->
+
+            <div class="position-example">
+
+                <h3>2. Relative Position</h3>
+
+                <p>
+                    Relative keeps the element in its normal position,
+                    but allows us to move it using top, right, bottom,
+                    or left.
+                </p>
+
+                <div class="relative-box">
+                    Relative
+                </div>
+
+            </div>
+
+
+            <!-- ================= ABSOLUTE ================= -->
+
+            <div class="position-example">
+
+                <h3>3. Absolute Position</h3>
+
+                <p>
+                    An absolute element is removed from the normal document
+                    flow. It is positioned relative to its nearest positioned
+                    parent.
+                </p>
+
+                <div class="absolute-container">
+
+                    <div class="absolute-box">
+                        Absolute
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= Z-INDEX ================= -->
+
+            <div class="position-example">
+
+                <h3>4. Z-Index</h3>
+
+                <p>
+                    z-index controls which positioned element appears
+                    in front of another element.
+                </p>
+
+                <div class="z-container">
+
+                    <div class="z-box box-one">
+                        Box 1
+                    </div>
+
+                    <div class="z-box box-two">
+                        Box 2
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= FIXED ================= -->
+
+            <div class="position-example">
+
+                <h3>5. Fixed Position</h3>
+
+                <p>
+                    A fixed element stays attached to the browser window.
+                    It does not move when the page is scrolled.
+                </p>
+
+                <div class="fixed-demo">
+                    Fixed Example
+                </div>
+
+            </div>
+
+
+            <!-- ================= STICKY ================= -->
+
+            <div class="position-example">
+
+                <h3>6. Sticky Position</h3>
+
+                <p>
+                    A sticky element behaves normally until it reaches
+                    a specified position, after which it sticks there
+                    while scrolling.
+                </p>
+
+                <div class="sticky-container">
+
+                    <div class="sticky-box">
+                        I am Sticky
+                    </div>
+
+                    <p>
+                        Scroll the page to understand how sticky positioning
+                        works.
+                    </p>
+
+                    <p>
+                        This is some extra content used to create enough
+                        space for scrolling.
+                    </p>
+
+                    <p>
+                        Sticky elements are useful for navigation bars,
+                        headings, filters, and similar UI elements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <p>
+            &copy; 2026 HTML & CSS Practice Website
+        </p>
+
+        <p>
+            Created for learning web development.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
