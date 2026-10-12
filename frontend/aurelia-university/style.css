@@ -1,0 +1,1897 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #071b32;
+    --blue: #1456d8;
+    --light-blue: #e8f0ff;
+    --cream: #f7f5ef;
+    --white: #ffffff;
+    --gray: #68717d;
+    --line: #d7dbe0;
+    --gold: #c5a45d;
+    --heading-font: "Playfair Display", serif;
+    --body-font: "DM Sans", sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--navy);
+    font-family: var(--body-font);
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    font-family: var(--body-font);
+}
+
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+
+.top-bar {
+    min-height: 35px;
+    padding: 8px 5vw;
+    background-color: var(--navy);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+.top-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    color: #b9c4d1;
+
+}
+
+
+.top-links a:hover {
+
+    color: white;
+
+}
+
+
+nav {
+    min-height: 85px;
+    padding: 15px 5vw;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.logo-mark {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+
+    color: white;
+
+    font-family: var(--heading-font);
+
+    font-size: 15px;
+
+    border-radius: 2px;
+
+}
+
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.logo-text strong {
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.logo-text span {
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color: var(--gray);
+
+    font-style: normal;
+
+}
+
+
+.nav-items {
+
+    display: flex;
+
+    gap: 32px;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.nav-items a {
+
+    position: relative;
+
+}
+
+
+.nav-items a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: var(--blue);
+
+    bottom: -8px;
+
+    left: 0;
+
+    transition: .3s ease;
+
+}
+
+
+.nav-items a:hover::after {
+
+    width: 100%;
+
+}
+
+
+.nav-action a {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    background-color: var(--blue);
+
+    color: white;
+
+    padding: 13px 20px;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    transition: .3s ease;
+
+}
+
+
+.nav-action a:hover {
+
+    background-color: var(--navy);
+
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    height: calc(100vh - 120px);
+
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+
+}
+
+
+.hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+
+.hero-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.02);
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,27,50,.92) 0%,
+            rgba(7,27,50,.68) 42%,
+            rgba(7,27,50,.15) 100%
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1150px, 90%);
+
+    margin: auto;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.hero .eyebrow {
+
+    color: #dce7f8;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 {
+
+    font-family: var(--heading-font);
+
+    font-weight: 400;
+
+    font-size: clamp(65px, 9vw, 125px);
+
+    line-height: .82;
+
+    letter-spacing: -5px;
+
+    max-width: 700px;
+
+}
+
+
+.hero h1 span {
+
+    color: #8fb5ff;
+
+    font-style: italic;
+
+}
+
+
+.hero-description {
+
+    max-width: 470px;
+
+    margin-top: 35px;
+
+    color: #d3dae3;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+}
+
+
+.primary-button,
+.outline-button,
+.light-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 22px;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition: .3s ease;
+
+}
+
+
+.primary-button {
+
+    background-color: var(--blue);
+
+    color: white;
+
+}
+
+
+.primary-button:hover {
+
+    background-color: white;
+
+    color: var(--navy);
+
+    transform: translateY(-3px);
+
+}
+
+
+.outline-button {
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    color: white;
+
+}
+
+
+.outline-button:hover {
+
+    background-color: white;
+
+    color: var(--navy);
+
+}
+
+
+.hero-bottom {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 5%;
+
+    right: 5%;
+
+    z-index: 3;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    text-transform: uppercase;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: #c5ceda;
+
+}
+
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+
+    padding: 130px 10vw;
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 50px;
+
+    background-color: var(--cream);
+
+}
+
+
+.intro-number {
+
+    font-family: var(--heading-font);
+
+    font-size: 24px;
+
+    color: var(--blue);
+
+}
+
+
+.intro-content {
+
+    max-width: 950px;
+
+}
+
+
+.intro-content h2 {
+
+    font-family: var(--heading-font);
+
+    font-weight: 400;
+
+    font-size: clamp(45px, 6vw, 78px);
+
+    line-height: 1;
+
+    margin-top: 20px;
+
+}
+
+
+.intro-content h2 span {
+
+    color: var(--blue);
+
+    font-style: italic;
+
+}
+
+
+.intro-bottom {
+
+    margin-top: 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    align-items: flex-end;
+
+}
+
+
+.intro-bottom p {
+
+    max-width: 450px;
+
+    color: var(--gray);
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+}
+
+
+.intro-bottom a {
+
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid var(--navy);
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: var(--navy);
+
+    color: white;
+
+}
+
+
+.stat {
+
+    padding: 60px 30px;
+
+    border-right: 1px solid rgba(255,255,255,.12);
+
+}
+
+
+.stat strong {
+
+    display: block;
+
+    font-family: var(--heading-font);
+
+    font-size: 60px;
+
+    font-weight: 400;
+
+    color: #9dbbff;
+
+}
+
+
+.stat span {
+
+    color: #aeb9c7;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-style: normal;
+
+}
+
+
+
+/* =====================================================
+   PROGRAMS
+===================================================== */
+
+.programs {
+
+    padding: 120px 8vw;
+
+    background-color: white;
+
+}
+
+
+.program-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.program-heading h2 {
+
+    font-family: var(--heading-font);
+
+    font-size: 65px;
+
+    font-weight: 400;
+
+    margin-top: 15px;
+
+}
+
+
+.program-heading > p {
+
+    max-width: 400px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    align-self: flex-end;
+
+}
+
+
+.program-list {
+
+    border-top: 1px solid var(--navy);
+
+}
+
+
+.program {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr 50px;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 30px 10px;
+
+    border-bottom: 1px solid var(--line);
+
+    transition: .35s ease;
+
+}
+
+
+.program:hover {
+
+    padding-left: 30px;
+
+    padding-right: 30px;
+
+    background-color: var(--light-blue);
+
+}
+
+
+.program-number {
+
+    font-family: var(--heading-font);
+
+    color: var(--blue);
+
+    font-size: 18px;
+
+}
+
+
+.program h3 {
+
+    font-family: var(--heading-font);
+
+    font-weight: 400;
+
+    font-size: 30px;
+
+}
+
+
+.program p {
+
+    color: var(--gray);
+
+    font-size: 11px;
+
+    margin-top: 5px;
+
+}
+
+
+.program > i {
+
+    color: var(--blue);
+
+}
+
+
+
+/* =====================================================
+   RESEARCH
+===================================================== */
+
+.research {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+
+    background-color: var(--light-blue);
+
+}
+
+
+.research-image {
+
+    position: relative;
+
+    min-height: 600px;
+
+}
+
+
+.research-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.research-tag {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    padding: 12px 15px;
+
+    background-color: var(--white);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.research-content {
+
+    padding: 80px 8vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.research-content h2 {
+
+    font-family: var(--heading-font);
+
+    font-weight: 400;
+
+    font-size: clamp(50px, 5vw, 75px);
+
+    line-height: .9;
+
+    margin: 20px 0 30px;
+
+}
+
+
+.research-content h2 span {
+
+    color: var(--blue);
+
+    font-style: italic;
+
+}
+
+
+.research-content > p {
+
+    max-width: 450px;
+
+    color: var(--gray);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.research-links {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.research-links a {
+
+    width: fit-content;
+
+    display: flex;
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid var(--navy);
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   CAMPUS
+===================================================== */
+
+.campus {
+
+    padding: 120px 6vw;
+
+    background-color: var(--cream);
+
+}
+
+
+.campus-heading {
+
+    margin-bottom: 50px;
+
+}
+
+
+.campus-heading h2 {
+
+    font-family: var(--heading-font);
+
+    font-size: 65px;
+
+    font-weight: 400;
+
+    margin-top: 15px;
+
+}
+
+
+.campus-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+.campus-card {
+
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.campus-card img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+
+}
+
+
+.campus-card:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+.campus-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 45%,
+        rgba(7,27,50,.8)
+    );
+
+}
+
+
+.campus-caption {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    right: 25px;
+
+    z-index: 2;
+
+    color: white;
+
+}
+
+
+.campus-caption span {
+
+    color: #9dbbff;
+
+    font-size: 11px;
+
+}
+
+
+.campus-caption h3 {
+
+    font-family: var(--heading-font);
+
+    font-weight: 400;
+
+    font-size: 30px;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* =====================================================
+   ADMISSIONS
+===================================================== */
+
+.admissions {
+
+    min-height: 500px;
+
+    padding: 100px 10vw;
+
+    background-color: var(--blue);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+.admissions-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.admissions .section-label {
+
+    color: #bdd1ff;
+
+}
+
+
+.admissions h2 {
+
+    font-family: var(--heading-font);
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    line-height: .9;
+
+    font-weight: 400;
+
+    margin: 20px 0;
+
+}
+
+
+.admissions h2 span {
+
+    color: #d9e5ff;
+
+    font-style: italic;
+
+}
+
+
+.admissions-content > p {
+
+    color: #d3e0ff;
+
+}
+
+
+.admission-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+}
+
+
+.light-button {
+
+    background-color: white;
+
+    color: var(--navy);
+
+}
+
+
+.light-button:hover {
+
+    background-color: var(--navy);
+
+    color: white;
+
+}
+
+
+.admissions-mark {
+
+    font-family: var(--heading-font);
+
+    font-size: 350px;
+
+    line-height: .7;
+
+    color: rgba(255,255,255,.08);
+
+    position: absolute;
+
+    right: 5%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+
+
+/* =====================================================
+   NEWS
+===================================================== */
+
+.news {
+
+    padding: 120px 7vw;
+
+    background-color: white;
+
+}
+
+
+.news-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 55px;
+
+}
+
+
+.news-heading h2 {
+
+    font-family: var(--heading-font);
+
+    font-size: 65px;
+
+    font-weight: 400;
+
+    margin-top: 15px;
+
+}
+
+
+.news-heading > a {
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid var(--navy);
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.news-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.news-card {
+
+    border-top: 1px solid var(--navy);
+
+    padding-top: 15px;
+
+}
+
+
+.news-image {
+
+    height: 270px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+
+}
+
+
+.news-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+
+}
+
+
+.news-card:hover .news-image img {
+
+    transform: scale(1.05);
+
+}
+
+
+.news-card > span {
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: var(--blue);
+
+    font-style: normal;
+
+    font-weight: 700;
+
+}
+
+
+.news-card h3 {
+
+    font-family: var(--heading-font);
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    margin: 12px 0 20px;
+
+}
+
+
+.news-card > a {
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background-color: var(--navy);
+
+    color: white;
+
+    padding: 70px 7vw 25px;
+
+}
+
+
+.footer-main {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 60px;
+
+    border-bottom: 1px solid rgba(255,255,255,.15);
+
+}
+
+
+.footer-brand p {
+
+    color: #9eabb9;
+
+    max-width: 250px;
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+}
+
+
+.footer-column h4 {
+
+    color: #9dbbff;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+
+}
+
+
+.footer-column a,
+.footer-column p {
+
+    color: #c1cad5;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+.footer-column a:hover {
+
+    color: white;
+
+}
+
+
+.footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    color: #718091;
+
+    font-size: 9px;
+
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .nav-items {
+
+        gap: 15px;
+
+    }
+
+
+    .nav-action {
+
+        display: none;
+
+    }
+
+
+    .intro {
+
+        padding: 100px 6vw;
+
+    }
+
+
+    .programs {
+
+        padding: 100px 6vw;
+
+    }
+
+
+    .campus-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .campus-card.large {
+
+        grid-column: span 2;
+
+    }
+
+
+    .news-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .news-card:last-child {
+
+        grid-column: span 2;
+
+    }
+
+
+    .footer-main {
+
+        grid-template-columns: 2fr 1fr 1fr;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .top-bar {
+
+        display: none;
+
+    }
+
+
+    nav {
+
+        min-height: 75px;
+
+        flex-wrap: wrap;
+
+        padding: 12px 20px;
+
+    }
+
+
+    .logo {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+
+    .nav-items {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        font-size: 9px;
+
+    }
+
+
+    .hero {
+
+        height: 700px;
+
+    }
+
+
+    .hero-content {
+
+        width: 88%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 65px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .hero-bottom {
+
+        font-size: 7px;
+
+    }
+
+
+    .intro {
+
+        display: block;
+
+        padding: 80px 7vw;
+
+    }
+
+
+    .intro-number {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .intro-content h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .intro-bottom {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .stat {
+
+        padding: 40px 20px;
+
+    }
+
+
+    .stat strong {
+
+        font-size: 45px;
+
+    }
+
+
+    .program-heading {
+
+        flex-direction: column;
+
+    }
+
+
+    .program-heading h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .program {
+
+        grid-template-columns: 40px 1fr 25px;
+
+        gap: 15px;
+
+        padding: 25px 5px;
+
+    }
+
+
+    .program h3 {
+
+        font-size: 23px;
+
+    }
+
+
+    .research {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .research-image {
+
+        min-height: 450px;
+
+    }
+
+
+    .research-content {
+
+        padding: 70px 7vw;
+
+    }
+
+
+    .campus-heading h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .campus-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .campus-card.large {
+
+        grid-column: auto;
+
+    }
+
+
+    .campus-card {
+
+        height: 430px;
+
+    }
+
+
+    .admissions {
+
+        padding: 80px 7vw;
+
+    }
+
+
+    .admissions h2 {
+
+        font-size: 55px;
+
+    }
+
+
+    .admission-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .admissions-mark {
+
+        font-size: 200px;
+
+        right: -20px;
+
+    }
+
+
+    .news-heading {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+    }
+
+
+    .news-heading h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .news-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .news-card:last-child {
+
+        grid-column: auto;
+
+    }
+
+
+    .footer-main {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column: span 2;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 430px) {
+
+    .hero h1 {
+
+        font-size: 56px;
+
+    }
+
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .stat {
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(255,255,255,.12);
+
+    }
+
+
+    .program-heading h2 {
+
+        font-size: 43px;
+
+    }
+
+
+    .program h3 {
+
+        font-size: 20px;
+
+    }
+
+
+    .research-content h2 {
+
+        font-size: 50px;
+
+    }
+
+
+    .admissions h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    .footer-main {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column: auto;
+
+    }
+
+}
