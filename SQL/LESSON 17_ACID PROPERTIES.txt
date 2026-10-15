@@ -1,0 +1,14 @@
+ACID PROPERTIES:
+	ACID properties are rules that ensure reliable and consistent transaction processing in databases.
+
+ACID stands for:
+
+A → Atomicity
+	A transaction is treated as a single unit — either all operations happen or none happen. (all or nothing)
+C → Consistency
+	A transaction must move database from one valid state to another valid state. (maintains database validity)
+I → Isolation
+	A transaction should always transaction occurring in same database without any conflicts. (prevents transaction conflicts)
+D → Durability
+	Once committed, data remains permanently saved even after system crash. (ensures committed
+data is permanent)

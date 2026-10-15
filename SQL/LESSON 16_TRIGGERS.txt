@@ -1,0 +1,61 @@
+TRIGGERS:
+	A Trigger is a special type of stored program in MySQL that automatically executes when an event occurs on a table.
+Events are:
+INSERT
+UPDATE
+DELETE
+
+TYPES OF TRIGGERS:
+
+| Trigger Type  | Description                    |
+| ------------- | ------------------------------ |
+| BEFORE INSERT | Executes before inserting data |
+| AFTER INSERT  | Executes after inserting data  |
+| BEFORE UPDATE | Executes before updating data  |
+| AFTER UPDATE  | Executes after updating data   |
+| BEFORE DELETE | Executes before deleting       |
+| AFTER DELETE  | Executes after deleting        |
+
+SYNTAX:
+CREATE
+DELIMITER //
+
+CREATE TRIGGER trigger_name
+BEFORE/AFTER INSERT/UPDATE/DELETE
+ON table_name
+FOR EACH ROW
+BEGIN
+
+   -- SQL statements
+
+END //
+
+DELIMITER ;
+
+2. SHOW
+SHOW TRIGGERS;
+
+3. DROP
+DROP TRIGGER trigger_name;
+
+Advantages of Triggers:
+Automatic execution
+Maintains audit logs
+Enforces business rules
+Reduces manual work
+Improves data integrity
+
+Disadvantages:
+Hard to debug
+Too many triggers reduce performance
+Hidden execution may confuse developers
+
+Interview Practice Queries
+Create trigger to prevent NULL salary.
+Create trigger to log deleted employees.
+Create trigger to automatically update modified date.
+Create trigger to stop duplicate email insertion.
+Create trigger to store old data before delete.
+
+
+

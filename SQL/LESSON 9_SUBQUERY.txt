@@ -1,0 +1,57 @@
+SUBQUERY:
+Sub Queries:
+	A query inside another query is known as Subquery.
+
+Syntax:
+Select column_name (op data)
+From Table_Name
+<where condition> (select column-name(input data) From Table-name);
+
+When we have to go For sub queries ?
+	If we want to Fetch the output from one table based on the input of another table. In this case, we have to go For Subqueries.
+
+Execution process:
+--First the inner query get executed.
+--Based on the inner query output, the outer query get executed
+
+Types of subqueries:
+
+(i) Single-row subquery
+(ii) Multi row subquery
+(iii) co-related subquery
+
+(i) Single-row subquery
+	If the inner query is displaying only one output, then it is
+known as Single-row subquery.
+
+Incase of single-row subquery, we can use the "="operator between the outer query and inner query
+
+(ii)Multi-row subquery:
+	--If the inner queries return more than one output, then it is known as multi-row subquery.
+	--Incase of multi-row Subquery we have to use the 'IN' Operator between Outer query and inner query
+
+(iii)Co-related subquery:
+	A correlated subquery is a subquery that uses values from the outer query.
+
+Eg:
+Find Employees Earning More Than their Department Average Salary
+SELECT emp_name, department, salary
+FROM employee e1
+WHERE salary > (
+
+    SELECT AVG(salary)
+    FROM employee e2
+    WHERE e1.department = e2.department
+
+);
+
+
+	= -> Fetch single record
+	IN -> Fetch multiple records
+
+Practice Questions
+Find employees earning less than department average.
+Find second highest salary department wise.
+Find employees with highest salary in each department.
+Find departments where average salary > 1800.
+Find duplicate emails using correlated subquery.

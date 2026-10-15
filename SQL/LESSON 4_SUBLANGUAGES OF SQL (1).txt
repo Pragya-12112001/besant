@@ -1,0 +1,147 @@
+SUB-LANGUAGES OF SQL:
+
+SQL is divided into five sub-languages, each serving a distinct purpose in database operations. 
+Understanding these categories is fundamental to mastering SQL. 
+
+ 
+                              SQL 
+  ┬──────────┬──────────┬───────────┬──────────┬
+ DQL           DML           DDL             TCL           DCL 
+  │             │             │              │             │ 
+SELECT        INSERT        CREATE          COMMIT        GRANT 
+              UPDATE        ALTER           SAVEPOINT     REVOKE 
+              DELETE          ├── ADD      ROLLBACK 
+                              ├── RENAME 
+                              ├── DROP 
+                              └── MODIFY   
+                            RENAME                                                         
+                            DROP 
+                            TRUNCATE            
+
+DQL – Retrieves data from the database.
+DML – Manipulates data stored in tables.
+DDL – Defines and modifies the database structure.
+TCL – Manages transactions to ensure data consistency.
+DCL – Controls user permissions and security.
+
+=============================================================================================================================
+
+DQL(DATA QUERY LANGUAGE):
+
+Used to retrieve data from the database.
+
+Command:
+SELECT – Retrieves data from one or more tables.
+
+SYNTAX:
+
+SELECT * FROM table_name; (retrives entire data)
+
+SELECT column_name FROM table_name; (retrives only particular column data)
+
+=============================================================================================================================
+
+DML(DATA MANIPULATION LANGUAGE):(ROW-LEVEL LANGUAGE)
+
+Used to manipulate the data in the tables. These changes can be rolled 
+back using TCL commands like ROLLBACK before being committed.
+
+Commands:
+
+INSERT – Adds new row of records at the end of the table.
+
+SYNTAX:
+
+INSERT INTO table_name(c1,c2,c3,...)
+VALUES(v1,v2,v3,...);
+
+2. UPDATE – Modifies existing records with the new records in a selected row.
+
+SYNTAX:
+
+UPDATE table_name
+SET column1=value1,column2=value2,...
+WHERE condition;
+
+3. DELETE – Removes a row of records from a table based on the condition given.
+
+SYNTAX:
+
+DELETE FROM table_name
+WHERE condition;
+
+=============================================================================================================================
+
+DDL(DATA DEFINITION LANGUAGE): (Table/Column level language)
+
+Used to define and modify the database structure (schema).DDL changes are auto-committed and cannot be rolled back in most RDBMS. 
+
+Commands:
+
+CREATE – Creates a database objects (table, view, etc.)
+
+SYNTAX:
+
+CREATE TABLE table_name(
+             column1 datatype CONSTRAINTS,
+             column2 datatype,
+             column3 datatype
+);
+
+2. ALTER – Modifies an existing database object.
+
+ADD - It adds a new column to the existing table at the end of the table.
+
+SYNTAX:
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+RENAME - It helps to change a column name.
+
+SYNTAX:
+
+ALTER TABLE table_name
+RENAME COLUMN old_column_name 
+TO new_column_name;
+ 
+MODIFY - It modifies either the data type of the existing column when there is no data present in the specific column
+            or helps in changing the position of the column in the table.
+
+SYNTAX:
+
+ALTER TABLE table_name
+MODIFY column_name new_datatype;
+             
+ALTER TABLE table_name
+MODIFY column_name old_datatype first/after column_name;
+
+DROP - This deletes the entire column data along with the structure of that specific column so that the column 
+          no longer exists in the table.
+
+SYNTAX:
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+3. RENAME – Renames a database object like table name.
+
+SYNTAX:
+
+RENAME TABLE old_table_name
+TO new_table_name;
+
+4. DROP – Deletes a database/ table data completely along with the structure so that they no longer exists in the schema.
+
+SYNTAX:
+
+DROP TABLE table_name;
+
+5. TRUNCATE – Removes all rows from a table while keeping the table structure.
+
+SYNTAX:
+
+TRUNCATE TABLE table_name;
+
+=============================================================================================================================
+

@@ -1,0 +1,72 @@
+FUNCTIONS:
+
+	A function is used to process data and return a single value or result.
+
+                                                   Functions 
+                ┬───────────────────────────────────────────────────────────┬ 
+          Single Row/Scalar                                                             Multi Row/Aggregate 
+             │                                                                                │                                                                         
+  ┬─────────────────┬──────────────┬────────────────┬                         max() 
+ Number                Char                Date                Conversion                    min()           
+  mod()              length()           currentdate()          dateformat()                  sum() 
+  power()            ascii()            systemdate()           dateadd()                     avg()                                    
+  abs()              upper()            month()                datesub()                     count()                    
+  sqrt()             lower()            year()                 strtodate() 
+  floor()            substr() 
+  ceil()             replace() 
+  round()            reverse() 
+                     instr()
+
+
+
+Types of Functions:
+1.Single row function: -- Work on each row individually and Return one result per row.
+2.Multi row function:  -- Work on multiple rows and Return one result for all rows.
+
+
+SINGLE ROW FUNCTION:
+
+1. NUMBER FUNCTIONS:
+MOD()-- Returns remainder of division
+POWER()-- Raises a number to a power
+ABS()-- Returns absolute (positive) value
+SQRT()-- Returns square root
+FLOOR()-- Rounds down to nearest integer
+CEIL() / CEILING()-- Rounds up to nearest integer
+ROUND()-- Rounds to nearest value
+
+
+2. CHARACTER FUNCTIONS
+LENGTH()-- Returns length of string
+ASCII()-- Returns ASCII value of first character
+UPPER()-- Converts to uppercase
+LOWER()-- Converts to lowercase
+SUBSTR() / SUBSTRING()-- Extracts part of string
+REPLACE()-- Replaces part of string
+REVERSE()-- Reverses string
+INSTR()-- Finds position of substring
+
+
+3. DATE FUNCTIONS
+CURRENT_DATE()-- Returns current date
+SYSDATE()-- Returns current date & time
+MONTH()-- Extracts month from date
+YEAR()-- Extracts year from date
+
+
+4. CONVERSION FUNCTIONS
+DATE_FORMAT()-- Formats date
+DATE_ADD()-- Adds interval to date
+DATE_SUB()-- Subtracts interval
+STR_TO_DATE()-- Converts string to date
+
+=========================================================================================
+
+MULTI ROW FUNCTION(AGGREGATE):
+
+MAX()- Returns the maximum value of the specific column.
+MIN()- Returns the minimum value of the specific column.
+SUM()- Returns the total value of the specific column.
+AVG()- Returns the average value of the specific column.
+COUNT(*)- Returns the total count of rows of the table and it includes null value.
+COUNT(column)- Returns the count of rows in the specific column excluding null values.

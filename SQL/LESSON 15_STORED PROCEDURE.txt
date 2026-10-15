@@ -1,0 +1,102 @@
+STORED PROCEDURE:
+	 A stored procedure is a reusable, precompiled collection of SQL statements stored inside the database to perform specific tasks efficiently.
+It helps to,
+reuse SQL code,
+improve performance,
+reduce duplication.
+
+Advantage of Stored Procedures:
+Reusability
+Better performance
+Security
+Reduces network traffic
+Easier maintenance
+
+Syntax:
+DELIMITER //
+
+CREATE PROCEDURE procedure_name()
+BEGIN
+
+SELECT * FROM emp;
+
+END //
+
+DELIMITER ;
+
+DELIMITER:
+	DELIMITER is used in MySQL to change the default statement termination symbol temporarily.
+
+
+TYPES OF PARAMETER:
+| Parameter | Purpose               |
+| --------- | --------------------- |
+| IN        | Input value           |
+| OUT       | Returns output        |
+| INOUT     | Both input and output |
+
+
+
+DELIMITER //
+
+CREATE PROCEDURE getEmployees()
+BEGIN
+SELECT * FROM emp;
+END //
+
+DELIMITER ;
+
+CALL getEmployees();
+
+================================================================
+
+DELIMITER //
+
+CREATE PROCEDURE getEmployeeById(IN eid INT)
+BEGIN
+    SELECT *
+    FROM emp
+    WHERE empno = eid;
+END //
+
+DELIMITER ;
+
+CALL getEmployeeById(7521);
+
+===================================================================
+
+DELIMITER //
+
+CREATE PROCEDURE totalEmployees(OUT total INT)
+BEGIN
+    SELECT COUNT(*) INTO total
+    FROM emp;
+END //
+
+DELIMITER ;
+
+CALL totalEmployees(@total);  -- @total is a session variable.
+SELECT @total;
+
+====================================================================
+
+DELIMITER //
+
+CREATE PROCEDURE salary(INOUT sal DECIMAL(10,2))
+BEGIN
+  SET sal = sal + 2000;
+  END //
+
+DELIMITER ;
+
+SET @sal = 3000;
+CALL salary(@sal);
+SELECT @sal;
+
+=======================================================================
+
+DROP PROCEDURE getEmployee;
+
+SHOW PROCEDURE STATUS;
+
+SHOW CREATE PROCEDURE getEmployees;

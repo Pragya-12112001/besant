@@ -1,0 +1,193 @@
+Normalisation:
+	 It in used to organize the data into database. It is used to reduce the data redundancy. It is allowed to eliminate the insertion, updation, deletion anomalies (problem)
+Types of normalization:
+
+(1NF) First Normal form
+
+(2NF) Second Normal form
+
+(3NF) Third Normal form
+
+(BCNP) Boyce Codd Normal form
+
+1NF:
+
+	If a table want to be in 1NF first it should satisfy the following condition
+
+i) The column name of the table should be unique and related.
+
+ⅱ) The domain of the table should be same
+
+iii) There should not be any multi valued attributes
+
+2NF:
+
+	If you want to perform 2NF first it should satisfy
+
+i) All the conditions available in 1NF.
+
+ii) There should be functional dependency among the Attribute.
+
+Note: Functional dependency is nothing but all the
+
+non prime attributes should depend on prime attributes
+
+3NF:
+
+	If a table wanted to be in 3NF it should satisfy
+
+i) All the conditions of 2NF
+
+ⅱ) There should be transitive dependency in the
+
+attributes
+
+Note: An indirect dependency among the column in called transitive dependency
+
+BCNF:
+
+	It is also known as 3.5NF. It is an advanced version of 3NF.
+
+The anomalies / problem to resolve will be resolving in BCNF directly
+
+
+Advantages of Normalization:
+Reduces duplicate data
+Improves data integrity
+Saves storage
+Easier maintenance
+Avoids anomalies
+
+
+Disadvantages:
+More tables
+Complex joins
+Query performance may reduce sometimes
+
+
+
+
+
+1NF:
+
+       Biscuit                                         Student
+
+| Sid | Sname | Course    |                  | Sid | Sname | C1   | C2  |
+| --- | ----- | --------- |                  | --- | ----- | ---- | --- |
+| 1   | Raj   | C, SQL    |   ------------>  | 1   | Raj   | C    | SQL |
+| 2   | Rio   | Java, C++ |                  | 2   | Rio   | Java | C++ |
+| 3   | Ram   | C#, SQL   |                  | 3   | Ram   | C#   | SQL |
+
+
+
+
+
+
+
+
+2NF:
+                                                 student
+                                         | Sid | Sname | Pid |
+                                         | --- | ----- | --- |
+                                      -  | 01  | Raj   | 01  |
+           student                  -    | 02  | Rio   | 01  |
+                                  -      | 03  | Raja  | 01  |
+| Sid | Sname | Pid | Pname |   -
+| --- | ----- | --- | ----- | -
+| 01  | Raj   | 01  | Ram   |   -
+| 02  | Rio   | 01  | Ram   |     -
+| 03  | Raja  | 01  | Ram   |       -        professor
+                                      -   | Pid | Pname |
+                                          | --- | ----- |
+                                          | 01  | Ram   |
+
+3NF:
+                                                               student
+
+                                                      | Sid | Sname | Sage   | Pid |
+                                                      | --- | ----- | ------ | --- |
+                                                      | 01  | Raj   | 18     | 01  |
+                                                 -    | 02  | Rio   | 17     | 01  |
+             student                           -      | 03  | Raja  | 20     | 01  |
+                                             -
+| Sid | Sname | Pid | Pname | Sage   |     -
+| --- | ----- | --- | ----- | ------ |   -
+| 01  | Raj   | 01  | Ram   | 18     | -
+| 02  | Rio   | 01  | Ram   | 17     |   -
+| 03  | Raja  | 01  | Ram   | 20     |     -
+                                             -
+                                               -         professor
+                                                 -
+                                                   -   | Pid | Pname |
+                                                       | --- | ----- |
+                                                       | 01  | Ram   |
+
+
+
+BCNF:
+                                            student
+
+                                      | Sid | Sname | Pid |
+                                      | --- | ----- | --- |
+                                  -   | 01  | Raj   | 01  |
+       student                  -     | 02  | Rio   | 01  |
+                              -       | 03  | Raja  | 02  |
+| Sid | Sname | Pname |     -
+| --- | ----- | ----- |   -
+| 01  | Raj   | Ram   | -
+| 02  | Rio   | Ram   |   -
+| 03  | Raja  | Ram   |     -           professor
+                              - 
+                                -     | Pid | Pname |
+                                  -   | --- | ----- |
+                                    - | 01  | Ram   |
+                                      | 02  | Ram   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NORMALISATION:
+	In SQL/DBMS, Normalization is the process of organizing data in a database to:
+
+reduce data redundancy (duplicate data),
+avoid insertion, update, and deletion anomalies,
+improve data consistency.
+
+Types of Normal Forms:
+1NF (First Normal Form)
+
+Rules:
+
+No multiple values in one column.
+Each column contains atomic values.
+No repeating groups.
+
+2NF (Second Normal Form)
+
+Rules:
+
+Must be in 1NF.
+No partial dependency.
+Non-key attributes should depend on the whole primary key.
+
+3NF (Third Normal Form)
+
+Rules:
+
+Must be in 2NF.
+No transitive dependency.
+Non-key columns should depend only on the primary key.

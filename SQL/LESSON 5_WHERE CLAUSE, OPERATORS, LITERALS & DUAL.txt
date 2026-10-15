@@ -1,0 +1,99 @@
+WHERE CLAUSE:
+
+	The WHERE clause filters records in the table. It specifies conditions that rows must satisfy to be included in the result. Without WHERE, all rows are affected/returned. Multiple conditions can be combined using operators.
+
+SYNTAX:
+
+	SELECT * FROM table_name
+	WHERE <condition>;
+
+=====================================================================================================================
+
+OPERATORS:
+
+	Operators are special symbols or keywords used to perform operations on one or more values in SQL statements.
+
+TYPES OF OPERATORS:
+
+1.Arithmetic Operator - Performs mathematical calculations
+	+(Addition), -(Subtraction), *(Multiplication), /(Division), %(Modulus)
+2.Relational(Comparison) Operator - Compares two values
+	=(Equal to), != or <>(Not equal to), <(Less than), >(Greater than), <=(Less than or equal to),      
+       >=(Greater than or equal to)
+3.Logical Operator - Combine multiple condition
+	AND(All are true), OR(Either one is true), NOT(Doesn't include/ Opposite)
+4.Set Operator - Combines two or more tables
+	UNION(Excludes duplicate), UNION ALL(Includes Duplicates)
+5.Special Operator - Used for Specific SQL conditions
+	IN(Multiple input), BETWEEN(Specific range), LIKE(Matching pattern), IS NULL(Null values check)
+	AS(Alias - Temporary name)
+
+=====================================================================================================================
+
+LITERALS:
+ 
+	Fixed values used in query. They are constant values that do not change during query execution.
+
+TYPES OF LITERALS:
+
+   	- String Literals -- Eg.,dept = 'sales'
+   	- Number Literals -- Eg.,sal >500
+   	- Date Literals -- Eg.,doj = '1996-08-21'
+
+DIFFERENCE BETWEEN:
+
+| Literals         | Variables          |
+| ---------------- | ------------------ |
+| Fixed values     | Can change         |
+| Directly written | Stored temporarily |
+
+Note : NULL is a special literal representing unknown or missing data.
+
+=====================================================================================================================
+
+DUAL TABLE: 
+
+	DUAL is a special table used when you want to execute a SELECT statement without needing to retrive data from an actual table. It is a dummy table created for practice. It contains only one row and one column.
+
+SYNTAX:
+
+	SELECT data FROM DUAL;
+	SELECT data;
+   
+NOTE: Operators control logic, literals provide values, and dual helps us practice.
+
+=====================================================================================================================
+
+TRIM() METHOD:
+
+	The TRIM function removes leading and/or trailing spaces (or specified characters) from a string. 
+LTRIM removes from the left; RTRIM from the right; TRIM removes from both sides. 
+
+Eg:
+
+	SELECT TRIM('   Hello World   ') AS trimmed; 
+	SELECT LTRIM('   SQL') AS left_trimmed; 
+	SELECT RTRIM('SQL   ') AS right_trimmed;
+
+=====================================================================================================================
+
+DISTINCT KEYWORD:
+
+	The DISTINCT keyword removes duplicate rows from a SELECT query result. It ensures only unique 
+values are returned for the specified columns. 
+
+SYNTAX:
+
+	SELECT DISTINCT column_name FROM table_name; 
+
+
+
+
+
+
+
+
+
+
+
+

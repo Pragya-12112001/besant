@@ -1,0 +1,76 @@
+WINDOW FUNCTION(RANK FUNCTION):
+
+	Window function is used to assign ranks to rows based on a specified column.
+Rows with the same value receive the same rank.
+
+SQL provides mainly 3 ranking functions:
+
+1.RANK()
+2.DENSE_RANK()
+3.ROW_NUMBER()
+
+These are window functions used with OVER() clause.
+
+
+1.RANK() -- Assigns ranks to rows.
+Duplicate values get the same rank, and next rank is skipped.
+
+Syntax:
+SELECT column1,column2,
+       RANK() OVER(ORDER BY column2 DESC) AS rank
+FROM table_name;
+
+2.DENSE_RANK() -- Assigns same rank for duplicates, but does NOT skip ranks.
+
+Syntax:
+SELECT column1,column2,
+       DENSE_RANK() OVER(ORDER BY column2 DESC) rank
+FROM table_name;
+
+3.ROW_NUMBER() -- Assigns unique row numbers to every row.
+Duplicates also get different numbers.
+
+Syntax:
+SELECT column1,column2,
+       ROW_NUMBER() OVER(ORDER BY column2 DESC) rank
+FROM table_name;
+
+
+
+| Function     | Duplicate Ranks | Skips Rank |
+| ------------ | --------------- | ---------- |
+| RANK()       | Yes             | Yes        |
+| DENSE_RANK() | Yes             | No         |
+| ROW_NUMBER() | No              | No         |
+
+NOTE: ranking functions cannot be used in WHERE clause directly, instead use subquery.
+
+
+PARTITION BY CLAUSE:
+	It is used with window functions to divide rows into groups and perform calculations separately within each group.
+
+It works like GROUP BY for window functions,
+but does not reduce rows.
+
+Syntax:
+SELECT column_name,
+       function_name() OVER(
+           PARTITION BY column_name
+           ORDER BY column_name
+       )
+FROM table_name;
+
+
+| GROUP BY                      | PARTITION BY               |
+| ----------------------------- | -------------------------- |
+| Combines rows                 | Keeps all rows             |
+| Returns one row per group     | Returns all rows           |
+| Used with aggregate functions | Used with window functions |
+
+
+Real-Time Uses:
+
+department-wise salary ranking,
+monthly sales analysis,
+leaderboard systems,
+top performers per team.

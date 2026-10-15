@@ -1,0 +1,43 @@
+Index:
+	It is used to search the data in faster way. It is used to increase the database performance. We can create predefined index and our own index as well.
+
+Why is index faster?
+
+Because database searches indexed data instead of scanning the whole table.
+                              
+                           INDEX 
+        ┬────────────────────────────────┬─ 
+  Clustered Index (0)                          Non – Clustered Index (1)
+       -- Primary Key                             -- Non – Primary Key
+
+Syntax:
+1. Create Index:
+CREATE INDEX index_name      ---idx_ename
+ON table_name(column_name);
+
+2. View Index:
+SHOW INDEX FROM table_name;
+
+3. Delete Index:
+DROP INDEX index_name
+ON table_name;
+
+| Advantage                  | Disadvantage               |
+| -------------------------- | -------------------------- |
+| Faster retrieval           | Uses extra storage         |
+| Improves WHERE performance | Slows INSERT/UPDATE/DELETE |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

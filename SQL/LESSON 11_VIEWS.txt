@@ -1,0 +1,29 @@
+VIEWS:
+
+	A VIEW is a virtual table created from one or more tables using a query. It does not store data permanently. It shows data from the original table whenever accessed.
+Why Do We Use VIEW?
+-- Hide complex queries
+-- Improve security
+-- Simplify data access
+-- Restrict access to specific columns
+Syntax:
+Create view:
+CREATE VIEW view_name AS
+SELECT column1, column2
+FROM table_name
+WHERE condition;
+
+2.Access view:
+SELECT * FROM view_name;
+
+3. Drop view:
+DROP VIEW view_name;
+
+Diff btw view and table:
+
+| VIEW                       | TABLE                |
+| -------------------------- | -------------------- |
+| Virtual table              | Physical table       |
+| Stores query only          | Stores actual data   |
+| Less memory                | More memory          |
+| Data comes from base table | Data stored directly |

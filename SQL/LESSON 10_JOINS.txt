@@ -1,0 +1,131 @@
+JOINS:
+	The process of retrieving data from multiple data table is known as joins.
+
+
+
+                                         JOINS
+        ┬──────────────────────────────────────────────────────────┬─
+      Physical                                                            Logical
+           │                                                                 │
+  ┬────────────┬                                      ┬────────────────────────────┬────
+ Primary Key   Foreign Key                          Combined Data                      Combination of Data
+                                                          │                               │
+                                                     Set Operator                     Cross Join
+                                                                                      Equi Join
+                                                                                      Inner Join
+                                                                                      Self Join
+                                                                                      Outer Join
+                                                                                          │
+                                                                                   ┬─────┬─────┬
+                                                                      Left Outer       Right Outer       Full Outer
+
+
+
+
+CROSS JOIN:[valid and invalid data]
+It is also known as cartesian joins which is implemented from the set theory of mathematics.
+It is also used to fetch the required data from multiple tables.
+Combines every row of first table with every row of second table. Returns Cartesian product of two tables.
+Cross join  can display the output from multiple tables without any connections.
+Syntax:
+SELECT tab.columns
+FROM table1
+CROSS JOIN table2;
+Eg:
+SELECT emp.ename,
+       dept.dname
+FROM emp CROSS JOIN dept;
+
+Note: No condition is used. Every combination is displayed.
+
+EQUI JOIN:[valid combination]
+It removes invalid combination of output.
+It has joining condition specified by using '=' relational operator.
+It returns matching records based on equal values in common columns.
+Syntax:
+SELECT tab.col_name, tab.col_name
+FROM tab_name1, tab_name2
+WHERE condition
+AND
+joining condition
+
+Eg:
+SELECT e.ename,d.dname
+FROM emp e,dept d
+WHERE e.deptno = d.deptno;
+
+INNER JOIN:
+It is same as equi join but it can use all comparative operators including '='.
+Returns only matching records from both tables.
+Syntax:
+SELECT columns
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+Eg:
+SELECT emp.emp_id,
+       emp.emp_name,
+       dept.dept_name
+FROM emp
+INNER JOIN dept
+ON emp.dept_id = dept.dept_id;
+
+Query:
+Write a query to fetch employee name, half of their salary and location who are working as a manager.
+Display ename, annual salary, joining date along with their dept info of all the 'salesman' and 'analyst'.
+3.Display the ename, dname, annual salary of employee SMITH who is working in the dept 20
+4.Write a query to fetch name, half of the their salary along with their dept info of all the employees.
+5.Write a query to fetch employee details along with the dname and location of employee who are getting salary more than 1500.
+
+
+SELF JOIN:
+	A table joined with itself. Used when rows in the same table are related.
+Syntax:
+SELECT a.column_name,
+       b.column_name
+FROM table_name a
+JOIN table_name b
+ON a.common_column = b.common_column;
+Eg:
+SELECT e.emp_name AS Employee,
+       m.emp_name AS Manager
+FROM emp e
+JOIN emp m
+ON e.manager_id = m.emp_id;
+
+OUTER JOIN:
+
+LEFT OUTER JOIN
+Returns ALL rows from the left table, and matching rows from the right table. If no match, NULLs
+appear for right table columns.
+
+Syntax:
+SELECT columns
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+
+RIGHT OUTER JOIN:
+Returns ALL rows from the right table, and matching rows from the left table. If no match, NULLs
+appear for left table columns.
+ 
+Syntax:
+SELECT columns
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+FULL OUTER JOIN :
+Returns ALL rows from both tables. NULLs appear where there is no match on either side. MySQL
+doesn't support FULL OUTER JOIN directly — use UNION of LEFT and RIGHT JOIN.
+
+Syntax:
+SELECT columns
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name
+UNION
+SELECT columns
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;

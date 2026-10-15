@@ -1,0 +1,72 @@
+CLAUSE:
+
+	1. WHERE CLAUSE
+	2. GROUP BY CLAUSE
+	3. HAVING CLAUSE
+	4. ORDER BY CLAUSE
+	5. LIMIT
+	6. OFFSET
+
+GROUP BY:
+
+	GROUP BY clause groups rows sharing the same values in specified columns into summary rows. It is always 
+used with aggregate functions.
+
+SYNTAX:
+
+	SELECT non_aggregate column, aggregate_function(column)
+	FROM table_name
+	GROUP BY non_aggregate column;
+
+NOTE:	All non aggregate column present in select should be used in GROUP BY clause.
+
+HAVING:
+
+	HAVING filters groups after GROUP BY aggregation. Unlike WHERE (which filters rows), HAVING 
+filters groups and can use aggregate functions. HAVING is always used after GROUP BY.
+
+SYNTAX:
+
+	SELECT non_aggregate column, aggregate_function(column)
+	FROM table_name
+	GROUP BY non_aggregate column
+	HAVING aggregate_function <condition>;
+
+DIFF BTW WHERE AND HAVING:
+
+| WHERE                          | HAVING                      |
+| ------------------------------ | --------------------------- |
+| Filters rows                   | Filters groups              |
+| Used before GROUP BY           | Used after GROUP BY         |
+| Cannot use aggregate functions | Can use aggregate functions |
+
+
+ORDER BY:
+
+	ORDER BY sorts the result set by one or more columns in ascending (ASC, default) or descending 
+(DESC) order.  
+
+SYNTAX:
+
+	SELECT * FROM table_name
+	ORDER BY column_name;
+
+LIMIT:
+
+	LIMIT restricts the number of rows returned by a query starting from top.
+
+SYNTAX:
+ 
+	SELECT * FROM table_name
+	LIMIT value;
+
+OFFSET:
+
+	OFFSET skips a specified number of rows before starting to return results.
+
+SYNTAX:
+
+	SELECT * FROM table_name
+	LIMIT value
+	OFFSET value;
+	
