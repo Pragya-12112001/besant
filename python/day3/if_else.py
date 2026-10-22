@@ -12,3 +12,8 @@ else:
   print('you cannot vote')
   
 score = 76
+
+fruits = ['apple', 'mango', 'banana']
+
+for i in fruits:
+  print(i)
