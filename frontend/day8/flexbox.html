@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - Complete Guide</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f5f7fb;
+            color: #202938;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            color: #c7d2fe;
+        }
+
+        nav {
+            background: #1e3a8a;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: auto;
+            padding: 25px 18px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 24px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #0000000a;
+        }
+
+        h2 {
+            color: #1d4ed8;
+            border-bottom: 2px solid #dbeafe;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #1e40af;
+            margin-top: 25px;
+        }
+
+        code {
+            background: #eaf0ff;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        .demo {
+            background: #eff6ff;
+            border: 2px dashed #93c5fd;
+            padding: 12px;
+            border-radius: 8px;
+            min-height: 100px;
+            margin: 15px 0;
+        }
+
+        .item {
+            background: #2563eb;
+            color: white;
+            min-width: 55px;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .row-demo {
+            display: flex;
+            gap: 10px;
+        }
+
+        .column-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .center-demo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 180px;
+        }
+
+        .space-demo {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .wrap-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .wrap-demo .item {
+            flex: 1 1 150px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .card {
+            flex: 1 1 220px;
+            padding: 20px;
+            background: #eff6ff;
+            border-radius: 8px;
+            border: 1px solid #bfdbfe;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .axis-demo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 140px;
+        }
+
+        .axis-demo .item:nth-child(2) {
+            padding: 28px 15px;
+        }
+
+        .note {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            margin: 15px 0;
+        }
+
+        .exercise {
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 15px 0;
+        }
+
+        details {
+            margin-top: 10px;
+            background: #f3f4f6;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Flexbox</h1>
+    <p>Introduction, Properties, Visual Examples and Exercises</p>
+</header>
+
+<nav>
+    <a href="#intro">Introduction</a>
+    <a href="#axes">Axes</a>
+    <a href="#container">Container</a>
+    <a href="#items">Items</a>
+    <a href="#examples">Examples</a>
+    <a href="#exercises">Exercises</a>
+</nav>
+
+<main>
+
+    <section id="intro">
+        <h2>1. Introduction to Flexbox</h2>
+
+        <p>
+            Flexbox stands for Flexible Box Layout. It is a CSS layout
+            system used to arrange elements, control spacing, align items,
+            and distribute available space within a container.
+        </p>
+
+        <p>
+            It is useful for navigation bars, buttons, cards, sidebars,
+            and responsive page sections.
+        </p>
+
+        <h3>Example: Normal layout</h3>
+        <div class="demo">
+            <div class="item" style="margin-bottom: 8px;">Box 1</div>
+            <div class="item" style="margin-bottom: 8px;">Box 2</div>
+            <div class="item">Box 3</div>
+        </div>
+
+        <h3>Example: Flexbox layout</h3>
+        <div class="demo row-demo">
+            <div class="item">Box 1</div>
+            <div class="item">Box 2</div>
+            <div class="item">Box 3</div>
+        </div>
+
+        <pre><code>.container {
+    display: flex;
+}</code></pre>
+
+        <p>
+            The parent becomes a flex container, and its direct children
+            become flex items.
+        </p>
+    </section>
+
+    <section id="axes">
+        <h2>2. Main Axis and Cross Axis</h2>
+
+        <p>
+            Flexbox arranges items along two axes. Understanding these
+            axes is essential before learning alignment properties.
+        </p>
+
+        <ul>
+            <li><strong>Main axis:</strong> The direction in which flex
+                items are laid out.</li>
+            <li><strong>Cross axis:</strong> The direction perpendicular
+                to the main axis.</li>
+        </ul>
+
+        <h3>Default direction: row</h3>
+        <div class="demo row-demo">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <p>
+            With <code>flex-direction: row</code>, the main axis is
+            horizontal and the cross axis is vertical.
+        </p>
+
+        <h3>Column direction</h3>
+        <div class="demo column-demo">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <p>
+            With <code>flex-direction: column</code>, the main axis
+            becomes vertical and the cross axis becomes horizontal.
+        </p>
+
+        <div class="note">
+            Remember: justify-content works along the main axis;
+            align-items works along the cross axis.
+        </div>
+    </section>
+
+    <section id="container">
+        <h2>3. Flex Container Properties</h2>
+
+        <h3>3.1 display</h3>
+        <pre><code>.container {
+    display: flex;
+}</code></pre>
+
+        <p>
+            Activates Flexbox for the element's direct children.
+            Use <code>display: inline-flex</code> when the container
+            itself should behave like an inline-level element.
+        </p>
+
+        <h3>3.2 flex-direction</h3>
+        <ul>
+            <li><code>row</code>: Left to right in the usual writing direction.</li>
+            <li><code>row-reverse</code>: Reverse horizontal direction.</li>
+            <li><code>column</code>: Top to bottom.</li>
+            <li><code>column-reverse</code>: Reverse vertical direction.</li>
+        </ul>
+
+        <pre><code>.container {
+    display: flex;
+    flex-direction: column;
+}</code></pre>
+
+        <h3>3.3 justify-content</h3>
+        <p>Distributes items along the main axis.</p>
+
+        <ul>
+            <li><code>flex-start</code>: Beginning of the main axis.</li>
+            <li><code>flex-end</code>: End of the main axis.</li>
+            <li><code>center</code>: Center of the main axis.</li>
+            <li><code>space-between</code>: Space between items.</li>
+            <li><code>space-around</code>: Space around items.</li>
+            <li><code>space-evenly</code>: Equal spacing between items and edges.</li>
+        </ul>
+
+        <h3>Visual example: space-between</h3>
+        <div class="demo space-demo">
+            <div class="item">One</div>
+            <div class="item">Two</div>
+            <div class="item">Three</div>
+        </div>
+
+        <pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+}</code></pre>
+
+        <h3>3.4 align-items</h3>
+        <p>Aligns items along the cross axis.</p>
+
+        <ul>
+            <li><code>stretch</code>: Stretches eligible items.</li>
+            <li><code>flex-start</code>: Aligns at the cross-axis start.</li>
+            <li><code>flex-end</code>: Aligns at the cross-axis end.</li>
+            <li><code>center</code>: Centers items.</li>
+            <li><code>baseline</code>: Aligns text baselines.</li>
+        </ul>
+
+        <pre><code>.container {
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+}</code></pre>
+
+        <h3>3.5 flex-wrap</h3>
+        <p>
+            Controls whether items stay on one line or wrap onto
+            multiple lines.
+        </p>
+
+        <div class="demo wrap-demo">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+
+        <pre><code>.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}</code></pre>
+
+        <ul>
+            <li><code>nowrap</code>: Single flex line (default).</li>
+            <li><code>wrap</code>: Allows additional lines.</li>
+            <li><code>wrap-reverse</code>: Reverses the cross-axis
+                stacking direction of flex lines.</li>
+        </ul>
+
+        <h3>3.6 align-content</h3>
+        <p>
+            Controls the distribution of multiple flex lines along the
+            cross axis when wrapping occurs and extra space is available.
+        </p>
+
+        <pre><code>.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 350px;
+}</code></pre>
+
+        <p>
+            Common values include center, flex-start, flex-end,
+            space-between, space-around, space-evenly and stretch.
+            It has no meaningful multi-line distribution effect when
+            there is only one flex line.
+        </p>
+
+        <h3>3.7 gap</h3>
+        <p>Creates spacing between items.</p>
+
+        <pre><code>.container {
+    display: flex;
+    gap: 20px;
+
+    /* Or define separate gaps */
+    row-gap: 15px;
+    column-gap: 25px;
+}</code></pre>
+
+        <h3>3.8 flex-flow</h3>
+        <p>
+            A shorthand for flex-direction and flex-wrap.
+        </p>
+
+        <pre><code>.container {
+    display: flex;
+    flex-flow: row wrap;
+}</code></pre>
+    </section>
+
+    <section id="items">
+        <h2>4. Flex Item Properties</h2>
+
+        <p>
+            These properties are applied to individual flex items,
+            rather than to the parent container.
+        </p>
+
+        <h3>4.1 order</h3>
+        <p>
+            Changes the visual order of items. The default value is 0.
+        </p>
+
+        <pre><code>.item-special {
+    order: -1;
+}</code></pre>
+
+        <h3>4.2 flex-grow</h3>
+        <p>
+            Determines how available positive free space is distributed
+            among items.
+        </p>
+
+        <pre><code>.item-one {
+    flex-grow: 1;
+}
+
+.item-two {
+    flex-grow: 2;
+}</code></pre>
+
+        <h3>4.3 flex-shrink</h3>
+        <p>
+            Determines how items shrink when their base sizes exceed
+            the available space.
+        </p>
+
+        <pre><code>.item {
+    flex-shrink: 1;
+}</code></pre>
+
+        <p>
+            A value of 0 prevents shrinking through the flex-shrink
+            calculation. Other values determine relative shrink factors,
+            taking item base sizes into account.
+        </p>
+
+        <h3>4.4 flex-basis</h3>
+        <p>
+            Specifies an item's initial main-axis size before free
+            space is distributed.
+        </p>
+
+        <pre><code>.item {
+    flex-basis: 200px;
+}</code></pre>
+
+        <h3>4.5 flex shorthand</h3>
+        <p>
+            Combines flex-grow, flex-shrink and flex-basis.
+        </p>
+
+        <pre><code>.item {
+    flex: 1;
+}</code></pre>
+
+        <h3>4.6 align-self</h3>
+        <p>
+            Overrides the container's align-items setting for an
+            individual item.
+        </p>
+
+        <pre><code>.special-item {
+    align-self: flex-end;
+}</code></pre>
+
+        <div class="note">
+            Flexbox alignment is relative to the axes. Changing
+            flex-direction changes which physical direction is the
+            main axis.
+        </div>
+    </section>
+
+    <section id="examples">
+        <h2>5. Practical Flexbox Examples</h2>
+
+        <h3>5.1 Center an element horizontally and vertically</h3>
+
+        <div class="demo center-demo">
+            <div class="item">Centered</div>
+        </div>
+
+        <pre><code>.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+}</code></pre>
+
+        <h3>5.2 Responsive card layout</h3>
+
+        <div class="card-container">
+            <article class="card">
+                <h3>HTML</h3>
+                <p>Structure the content of a webpage.</p>
+            </article>
+
+            <article class="card">
+                <h3>CSS</h3>
+                <p>Style and arrange page elements.</p>
+            </article>
+
+            <article class="card">
+                <h3>JavaScript</h3>
+                <p>Add behavior and interactivity.</p>
+            </article>
+        </div>
+
+        <pre><code>.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.card {
+    flex: 1 1 220px;
+}</code></pre>
+
+        <p>
+            Each card can grow, shrink, and wrap onto another line.
+            The exact number of cards per row depends on available space.
+        </p>
+
+        <h3>5.3 Navigation bar</h3>
+
+        <div style="display:flex; justify-content:space-between;
+                    align-items:center; gap:16px; flex-wrap:wrap;
+                    background:#172554; color:white; padding:18px;
+                    border-radius:8px;">
+            <strong>MyWebsite</strong>
+            <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                <span>Home</span>
+                <span>About</span>
+                <span>Projects</span>
+                <span>Contact</span>
+            </div>
+        </div>
+
+        <pre><code>.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}</code></pre>
+    </section>
+
+    <section id="exercises">
+        <h2>6. Flexbox Exercises</h2>
+
+        <p>
+            Attempt each exercise before opening its solution.
+            You can write the HTML and CSS in separate files.
+        </p>
+
+        <div class="exercise">
+            <h3>Exercise 1: Three boxes in a row</h3>
+            <p>
+                Create three div elements and arrange them horizontally
+                using Flexbox.
+            </p>
+
+            <details>
+                <summary>Show solution</summary>
+                <pre><code>.container {
+    display: flex;
+    gap: 10px;
+}</code></pre>
+            </details>
+        </div>
+
+        <div class="exercise">
+            <h3>Exercise 2: Center a box</h3>
+            <p>
+                Create a 300px-high parent and center its child both
+                horizontally and vertically.
+            </p>
+
+            <details>
+                <summary>Show solution</summary>
+                <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}</code></pre>
+            </details>
+        </div>
+
+        <div class="exercise">
+            <h3>Exercise 3: Navigation bar</h3>
+            <p>
+                Place a logo on the left and four navigation links
+                on the right.
+            </p>
+
+            <details>
+                <summary>Show solution</summary>
+                <pre><code>.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}</code></pre>
+            </details>
+        </div>
+
+        <div class="exercise">
+            <h3>Exercise 4: Wrapping cards</h3>
+            <p>
+                Create six cards that move onto new lines when
+                the screen becomes narrower.
+            </p>
+
+            <details>
+                <summary>Show solution</summary>
+                <pre><code>.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    flex: 1 1 220px;
+}</code></pre>
+            </details>
+        </div>
+
+        <div class="exercise">
+            <h3>Exercise 5: Sidebar and content</h3>
+            <p>
+                Create a 250px sidebar and a main content area that
+                uses the remaining width.
+            </p>
+
+            <details>
+                <summary>Show solution</summary>
+                <pre><code>.layout {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}</code></pre>
+            </details>
+        </div>
+
+        <div class="exercise">
+            <h3>Exercise 6: Responsive profile</h3>
+            <p>
+                Place a profile image next to a biography on wide
+                screens and stack them on narrow screens.
+            </p>
+
+            <details>
+                <summary>Show solution</summary>
+                <pre><code>.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}</code></pre>
+            </details>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Quick Revision</h2>
+
+        <ul>
+            <li><code>display: flex</code> activates Flexbox.</li>
+            <li><code>flex-direction</code> controls the main axis direction.</li>
+            <li><code>justify-content</code> distributes items on the main axis.</li>
+            <li><code>align-items</code> aligns items on the cross axis.</li>
+            <li><code>flex-wrap</code> allows items to wrap.</li>
+            <li><code>align-content</code> distributes multiple flex lines.</li>
+            <li><code>gap</code> creates spacing between items.</li>
+            <li><code>flex-grow</code> distributes positive free space.</li>
+            <li><code>flex-shrink</code> controls shrinking.</li>
+            <li><code>flex-basis</code> sets the initial main-axis size.</li>
+            <li><code>align-self</code> overrides one item's alignment.</li>
+            <li><code>order</code> changes visual ordering.</li>
+        </ul>
+
+        <p>
+            <strong>Learning tip:</strong> Experiment with one property
+            at a time. Predict the result, change the CSS, and observe
+            how the layout changes in your browser.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>CSS Flexbox Learning Guide | Learn, Practice, Build</p>
+</footer>
+
+</body>
+</html>

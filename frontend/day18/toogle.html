@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+</head>
+<body>
+  <button id="mode" onclick="toggle()"></button>
+
+  <script>
+    
+    let btn = document.getElementById("mode");
+    btn.innerText = "Dark";
+
+    function toggle() {
+      if (btn.innerText == "Dark") {
+        document.body.style.backgroundColor = "black";
+        btn.innerText = "White";
+      } else {
+        document.body.style.backgroundColor = "white";
+        btn.innerText = "Dark";
+      }
+    }
+
+  </script>
+
+  <!-- with adding txt and color do 10 tasks -->
+</body>
+</html>
