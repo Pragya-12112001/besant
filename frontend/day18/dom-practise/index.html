@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM - 10 Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .task {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 8px 14px;
+            margin: 5px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript DOM Practice</h1>
+
+    <div class="task">
+        <h3>Task 1: Change Text</h3>
+        <p id="text1">Hello World</p>
+        <button onclick="task1()">Change Text</button>
+    </div>
+
+    <div class="task">
+        <h3>Task 2: Change Text Color</h3>
+        <p id="text2">Change my color</p>
+        <button onclick="task2()">Change Color</button>
+    </div>
+
+    <div class="task">
+        <h3>Task 3: Change Background Color</h3>
+        <p id="text3">Change the background</p>
+        <button onclick="task3()">Change Background</button>
+    </div>
+
+    <div class="task">
+        <h3>Task 4: Toggle Dark Mode</h3>
+        <p id="text4">Light Mode</p>
+        <button id="mode" onclick="task4()">Dark</button>
+    </div>
+
+    <div class="task">
+        <h3>Task 5: Show and Hide Text</h3>
+        <p id="text5">You can hide me!</p>
+        <button onclick="task5()">Show / Hide</button>
+    </div>
+
+    <div class="task">
+        <h3>Task 6: Increase Font Size</h3>
+        <p id="text6">Make me bigger!</p>
+        <button onclick="task6()">Increase Size</button>
+    </div>
+
+    <div class="task">
+        <h3>Task 7: Change Text and Color</h3>
+        <p id="text7">Original Text</p>
+        <button onclick="task7()">Change Both</button>
+    </div>
+
+    <div class="task">
+        <h3>Task 8: Toggle Red and Blue</h3>
+        <p id="text8">Red or Blue?</p>
+        <button onclick="task8()">Toggle Color</button>
+    </div>
+
+    <div class="task">
+        <h3>Task 9: Change Button Text</h3>
+        <p id="text9">Click the button below</p>
+        <button id="btn9" onclick="task9()">Click Me</button>
+    </div>
+
+
+  <div class="task">
+      <h3>Task 10: Toggle Uppercase and Lowercase</h3>
+      <p id="text10">Hello JavaScript</p>
+      <button onclick="task10()">Change Case</button>
+  </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

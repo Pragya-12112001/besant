@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box{
+      background-color: bisque;
+      border: 4px solid;
+      width: 300px;
+      height: 400px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="inp">
+  <button id="btn" onclick="changeColor()" >change color</button>
+  
+  <br>
+  <input type="text" id="inp2">
+  <button id="btn" onclick="addTxt()" >add</button>
+  <h1 id="txt"></h1>
+
+  <div id="box">
+    <button onclick="handleClose()">close</button>
+  </div>
+
+</body>
+<script>
+
+  function changeColor() {
+    let color = document.getElementById('inp').value;
+    document.body.style.backgroundColor = color;
+  }
+  
+  function addTxt() {
+    let name = document.getElementById('inp2').value;
+    document.getElementById('txt').innerText = `hello ${name}`;
+  }
+
+  function handleClose() {
+    document.getElementById('box').remove();
+  }
+
+</script>
+<!-- 10 tasks using values -->
+</html>

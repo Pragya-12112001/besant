@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input-Based JavaScript Tasks</title>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    #box {
+      background-color: bisque;
+      width: 200px;
+      height: 100px;
+      margin-top: 10px;
+    }
+
+    input, button {
+      margin: 4px;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Input-Based JavaScript Practice</h1>
+
+  <section>
+    <h3>1. Change Background Color</h3>
+    <input id="color" placeholder="Enter a color">
+    <button onclick="changeColor()">Apply</button>
+  </section>
+
+  <section>
+    <h3>2. Display Greeting</h3>
+    <input id="name" placeholder="Enter your name">
+    <button onclick="greet()">Greet</button>
+    <p id="greeting"></p>
+  </section>
+
+  <section>
+    <h3 id="heading">3. Original Heading</h3>
+    <input id="headingInput" placeholder="Enter new heading">
+    <button onclick="changeHeading()">Update</button>
+  </section>
+
+  <section>
+    <h3>4. Change Font Size</h3>
+    <input id="fontSize" type="number" placeholder="Size in px">
+    <button onclick="changeFontSize()">Apply</button>
+    <p id="text">Change my font size!</p>
+  </section>
+
+  <section>
+    <h3>5. Change Box Color</h3>
+    <input id="boxColor" placeholder="Enter a color">
+    <button onclick="changeBoxColor()">Apply</button>
+    <div id="box"></div>
+  </section>
+
+  <section>
+    <h3>6. Calculate Square</h3>
+    <input id="squareInput" type="number" placeholder="Enter a number">
+    <button onclick="calculateSquare()">Calculate</button>
+    <p id="squareResult"></p>
+  </section>
+
+  <section>
+    <h3>7. Join Two Names</h3>
+    <input id="firstName" placeholder="First name">
+    <input id="lastName" placeholder="Last name">
+    <button onclick="joinNames()">Join</button>
+    <p id="fullName"></p>
+  </section>
+
+  <section>
+    <h3>8. Add Item to List</h3>
+    <input id="itemInput" placeholder="Enter an item">
+    <button onclick="addItem()">Add</button>
+    <ul id="list"></ul>
+  </section>
+
+  <section>
+    <h3>9. Change Box Width</h3>
+    <input id="widthInput" type="number" placeholder="Width in px">
+    <button onclick="changeWidth()">Apply</button>
+    <div id="widthBox" style="width:150px;height:50px;background:lightblue"></div>
+  </section>
+
+  <section>
+    <h3>10. Remove an Element by ID</h3>
+    <p id="removeMe">You can remove this paragraph.</p>
+    <input id="elementId" placeholder="Enter ID (eg-  removeMe)">
+    <button onclick="removeElement()">Remove</button>
+    <p id="removeResult"></p>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

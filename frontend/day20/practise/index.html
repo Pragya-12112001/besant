@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Create Account</h1>
+        <p class="subtitle">Register to get started</p>
+
+        <form id="registrationForm" novalidate>
+
+            <div class="form-group">
+                <label for="inp1">Full Name</label>
+                <input type="text" id="inp1" placeholder="Enter your name">
+                <p class="error" id="error1"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="inp2">Email</label>
+                <input type="text" id="inp2" placeholder="Enter your email">
+                <p class="error" id="error2"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="inp3">Password</label>
+                <input type="password" id="inp3" placeholder="Minimum 8 characters">
+                <p class="error" id="error3"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="inp4">Confirm Password</label>
+                <input type="password" id="inp4" placeholder="Re-enter password">
+                <p class="error" id="error4"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="inp5">Age</label>
+                <input type="number" id="inp5" placeholder="Enter your age">
+                <p class="error" id="error5"></p>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+                <p class="error" id="error6"></p>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" id="terms">
+                <label for="terms">I accept the terms and conditions</label>
+            </div>
+            <p class="error" id="error7"></p>
+
+            <button type="submit">Create Account</button>
+
+            <p id="success"></p>
+        </form>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
