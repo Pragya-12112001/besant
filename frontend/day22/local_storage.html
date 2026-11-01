@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="counter"></h1>
+  <button onclick="add()"></button>
+  
+</body>
+<script>
+  let count = localStorage.getItem('count') || 1
+  document.getElementById('counter').innerText = count
+
+  let add = ()=>{
+    count++
+    localStorage.setItem('count', count)
+    document.getElementById('counter').innerText = count
+
+  }
+
+
+
+  localStorage.setItem('user', 'pragya')
+  console.log(localStorage.getItem('user'))
+  localStorage.removeItem('user')
+  // localStorage.clear()
+  console.log(localStorage.getItem('user'))
+
+</script>
+</html>
