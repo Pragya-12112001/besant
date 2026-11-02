@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MUSE — discover remarkable artworks from The Metropolitan Museum of Art.">
+  <title>MUSE — Art, beyond the frame</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">A living collection of art, history &amp; ideas <span>—</span> freely explored.</div>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="MUSE home">MUSE<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#home">Discover</a>
+      <a href="#collection">Collection</a>
+      <a href="#artists">Artists</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-cta" href="#collection">Explore art <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE ART OF DISCOVERY</p>
+        <h1>Look closer.<br><em>Feel more.</em></h1>
+        <p class="hero-description">A window into extraordinary works, unexpected stories and the minds that shaped them.</p>
+        <a class="text-link" href="#collection">Enter the collection <span>↘</span></a>
+        <div class="hero-index"><span>01</span><span class="index-rule"></span><span>ENDLESS WAYS TO SEE</span></div>
+      </div>
+
+      <div class="hero-artwork">
+        <div class="hero-image-wrap">
+          <img id="hero-image" src="https://images.metmuseum.org/CRDImages/ep/web-large/DP-42549-001.jpg" alt="Wheat Field with Cypresses by Vincent van Gogh">
+          <span class="image-stamp">MUSE<br>FEATURE</span>
+        </div>
+        <div class="hero-caption">
+          <div>
+            <p class="caption-kicker">ON VIEW / 001</p>
+            <h2 id="hero-title">Wheat Field with Cypresses</h2>
+            <p id="hero-artist">Vincent van Gogh · 1889</p>
+          </div>
+          <a class="round-link" id="hero-link" href="artwork.html?id=436535" aria-label="View featured artwork">↗</a>
+        </div>
+      </div>
+      <div class="hero-side-note">ART IS NOT WHAT YOU SEE,<br>IT IS WHAT YOU MAKE OTHERS SEE.</div>
+    </section>
+
+    <section class="intro-strip" id="about">
+      <p>MORE THAN A COLLECTION.</p>
+      <p class="intro-statement">Art connects <em>time, place</em> and people. Discover the details that make every work worth a second look.</p>
+      <span class="intro-mark">✳</span>
+    </section>
+
+    <section class="collection-section section-shell" id="collection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> FIND YOUR NEXT FAVOURITE</p>
+          <h2>Explore the <em>collection.</em></h2>
+        </div>
+        <p class="section-aside">A selection of public-domain works<br>from The Metropolitan Museum of Art.</p>
+      </div>
+
+      <div class="collection-tools">
+        <form id="search-form" class="search-form" role="search">
+          <label class="sr-only" for="search-input">Search artworks or artists</label>
+          <span class="search-symbol">⌕</span>
+          <input id="search-input" type="search" placeholder="Search an artist, artwork or idea..." autocomplete="off">
+          <button type="submit">SEARCH <span>↗</span></button>
+        </form>
+        <div class="filter-row" aria-label="Artwork categories">
+          <button class="filter-chip active" data-query="painting">All works</button>
+          <button class="filter-chip" data-query="portrait">Portraits</button>
+          <button class="filter-chip" data-query="landscape">Landscapes</button>
+          <button class="filter-chip" data-query="flowers">Botanical</button>
+          <button class="filter-chip" data-query="sculpture">Sculpture</button>
+        </div>
+      </div>
+
+      <div class="results-meta">
+        <p id="results-label">SELECTED WORKS <span>—</span> <span id="results-count">DISCOVERING</span></p>
+        <p class="results-note">Select an artwork to explore its story ↗</p>
+      </div>
+
+      <div id="gallery-grid" class="art-grid" aria-live="polite">
+        <div class="loading-state"><span class="loader"></span><p>Gathering something beautiful...</p></div>
+      </div>
+      <p id="empty-state" class="empty-state" hidden>No artworks found for that search. Try another artist or subject.</p>
+      <div class="load-more-wrap">
+        <button id="load-more" class="outline-button" hidden>LOAD MORE WORKS <span>＋</span></button>
+      </div>
+    </section>
+
+    <section class="artist-feature" id="artists">
+      <div class="artist-feature-image">
+        <img src="https://images.metmuseum.org/CRDImages/ep/web-large/DP-42549-001.jpg" alt="Detail of a landscape painting">
+        <span class="vertical-label">ARTISTS / THEIR WORLDS</span>
+      </div>
+      <div class="artist-feature-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> BEHIND THE CANVAS</p>
+        <h2>Every artist<br>leaves a <em>trace.</em></h2>
+        <p>From bold experiments to quiet observations, explore the people and perspectives behind the works in our collection.</p>
+        <a class="text-link" href="#collection">Meet them through their work <span>↘</span></a>
+        <span class="artist-big-number">A—Z</span>
+      </div>
+    </section>
+
+    <section class="closing-note">
+      <p class="eyebrow">KEEP LOOKING</p>
+      <h2>There is always<br><em>more to see.</em></h2>
+      <a href="#home" class="round-link light" aria-label="Back to top">↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="#home">MUSE<span>.</span></a>
+    <p>An independent digital art discovery experience.<br>Artwork data and public-domain images courtesy of The Metropolitan Museum of Art.</p>
+    <a href="https://www.metmuseum.org/art/collection" target="_blank" rel="noreferrer">VISIT THE MET ↗</a>
+    <span class="footer-bottom">© 2026 MUSE · MADE FOR THE CURIOUS</span>
+  </footer>
+
+  <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+</body>
+</html>

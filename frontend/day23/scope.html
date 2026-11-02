@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // global
+  let a = 10;
+
+  let m1 = ()=> console.log(a)
+  let m2 = ()=> console.log(a)
+
+
+  let m3 = ()=>{
+    // local 
+    let b = 20;
+    console.log(a)
+    console.log(b)
+  }
+
+  let m4 = ()=> console.log(b)
+
+  // m4() // reference error
+  m1()
+  m2()
+  m3()
+</script>
+</html>
