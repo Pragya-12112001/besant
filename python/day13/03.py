@@ -16,3 +16,8 @@ def add(a, b):
 
 
 add(12, 34)
+
+@my_decorator
+def greet(name):
+    print(f'hello , {name}')
+greet('pragya')
