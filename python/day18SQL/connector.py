@@ -7,6 +7,8 @@ con = mysql.connector.connect(
   database = 'college'
 )
 
+# cursor used 
+
 if con.is_connected():
   print('connected to MYSQL successfully!!')
   
